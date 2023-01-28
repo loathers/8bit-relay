@@ -8,7 +8,7 @@ module.exports.main = () => {
     const vanyaPoints = (bonusZone == "black" ? 100 : 50) + kol.round((kol.min(300, kol.max(0, kol.numericModifier("Initiative") - 300))) / (bonusZone == "black" ? 10 : 20)) * 10
     const fungusPoints = (bonusZone == "red" ? 100 : 50) + kol.round((kol.min(300, kol.max(0, kol.numericModifier("Meat Drop") - 150))) / (bonusZone == "red" ? 10 : 20)) * 10
     const megaloPoints = (bonusZone == "blue" ? 100 : 50) + kol.round((kol.min(300, kol.max(0, kol.numericModifier("Damage Absorption") - 300))) / (bonusZone == "blue" ? 10 : 20)) * 10
-    const fieldPoints = (bonusZone == "green" ? 100 : 50) + kol.round((kol.min(300, kol.max(0, kol.numericModifier("Item Drop") - 150))) / (bonusZone == "green" ? 10 : 20)) * 10
+    const fieldPoints = (bonusZone == "green" ? 100 : 50) + kol.round((kol.min(300, kol.max(0, kol.numericModifier("Item Drop") - 100))) / (bonusZone == "green" ? 10 : 20)) * 10
 
     pageText = pageText.replace(`<style type='text/css'>`, `<style type='text/css'>
     @font-face {
