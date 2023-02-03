@@ -107,7 +107,7 @@ module.exports.main = () => {
         min-width: 250;
         text-align: center;
         position: fixed;
-        left: 10%;
+        left: clamp(20px, 5%, 10%);
     }
 
     #background {
