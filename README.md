@@ -1,4 +1,4 @@
-# 8bit-in-color
+# 8bit-relay
 
 ## Installation:
 
