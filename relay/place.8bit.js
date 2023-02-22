@@ -77,8 +77,6 @@ module.exports.main = () => {
         width: max-content;
         min-width: 250;
         text-align: center;
-        position: fixed;
-        left: clamp(20px, 5%, 10%);
     }
 
     .sheet-bonus {
@@ -106,8 +104,12 @@ module.exports.main = () => {
     // Setup the div where we put our cheat sheet
     pageText = pageText.replace(
         `<td><center>`,
-        `<td><center><div class="cheatsheet"><div style='font-family:nes; margin-bottom: 15px'>Cheat Codes</div><div class="zone-status"></div></div>`
+        `<td><center><div style="display:flex;"><div class="cheatsheet"><div style='font-family:nes; margin-bottom: 15px'>Cheat Codes</div><div class="zone-status"></div></div>`
     );
+    pageText = pageText.replace(
+        `<p><a href=place.php?whichplace=woods>`,
+        `</div><p><a href=place.php?whichplace=woods></p>`
+    )
 
     // This is the value of the modifer that affects each location
     // We needed to format them specifically here, which is why they're different than above
@@ -194,7 +196,7 @@ module.exports.main = () => {
     // Will turn the underlying black lines into the zone's corresponding color
     pageText = pageText.replace(
         `width=240 height=150 border=0 alt="The Fungus Plains (1)" title="The Fungus Plains (1)"`,
-        `width=222 height=141 border=0 alt="The Fungus Plains (1)" title="The Fungus Plains (1)" style='mix-blend-mode: lighten; background-color: red;'`
+        `width=227 height=141 border=0 alt="The Fungus Plains (1)" title="The Fungus Plains (1)" style='mix-blend-mode: lighten; background-color: red;'`
     );
     pageText = pageText.replace(
         `title="Megalo-City (1)"`,
