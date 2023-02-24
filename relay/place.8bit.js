@@ -5,6 +5,9 @@ module.exports.main = () => {
     // Since the relay script loads when the 8bit realm does, it'll be 8bit's HTML
     var pageText = visitUrl();
 
+    // We don't want to do anything when we visit the treasure house
+    if (pageText.include(`<b>Treasure House</b>`)) return;
+
     // This tracks which zone you're getting double points in
     // They're stored as the zone's corresponding color (black, red, blue, green)
     const bonusZone = getProperty("8BitColor");
@@ -109,7 +112,7 @@ module.exports.main = () => {
     pageText = pageText.replace(
         `<p><a href=place.php?whichplace=woods>`,
         `</div><p><a href=place.php?whichplace=woods></p>`
-    )
+    );
 
     // This is the value of the modifer that affects each location
     // We needed to format them specifically here, which is why they're different than above
@@ -174,7 +177,7 @@ module.exports.main = () => {
         `<div class="zone-status" style='text-align: center; width:100%; display: grid; gap: 10px;'>${cheatTable()}</div>`
     );
 
-    // Resizing divs to match clickable areas 
+    // Resizing divs to match clickable areas
     pageText = pageText.replace(
         `<div id=8castle class="element" style=' position: absolute; top: 117; left: 287; height: 110; width: 110;'>`,
         `<div id=8castle class="element" style=' position: absolute; top: 117; left: 287; height: 110; width: 110;'>`
