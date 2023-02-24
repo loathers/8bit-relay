@@ -6,7 +6,7 @@ module.exports.main = () => {
     var pageText = visitUrl();
 
     // We don't want to do anything when we visit the treasure house
-    if (pageText.include(`<b>Treasure House</b>`)) return;
+    if (pageText.includes(`<b>Treasure House</b>`)) return;
 
     // This tracks which zone you're getting double points in
     // They're stored as the zone's corresponding color (black, red, blue, green)
