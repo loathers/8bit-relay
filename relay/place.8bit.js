@@ -123,31 +123,31 @@ module.exports.main = () => {
 
     // Little tables for each zone to list your modifiers and expected point gains
     const vanyaStatus = `<a  style="text-decoration: none;" href=adventure.php?snarfblat=565><table style='width: 100%; text-align: center;'><tr><th>Vanya's Castle</th></tr><tr><td>${
-        vanyaStatusModifier >= 600
+        vanyaStatusModifier >= 595
             ? "<b>" + vanyaStatusModifier + "</b>"
             : vanyaStatusModifier
-    }% / 600% Initiative</td></tr><tr><td>Expected Points: ${
+    }% / 595% Initiative</td></tr><tr><td>Expected Points: ${
         vanyaPoints == 400 ? "<b>" + vanyaPoints + "</b>" : vanyaPoints
     }</td></tr></table></a>`;
     const fungusStatus = `<a  style="text-decoration: none;" href=adventure.php?snarfblat=563><table style='width: 100%; text-align: center;''><tr><th style="color: red;">The Fungus Plains</th></tr><tr><td>${
-        fungusStatusModifier >= 450
+        fungusStatusModifier >= 445
             ? "<b>" + fungusStatusModifier + "</b>"
             : fungusStatusModifier
-    }% / 450% Meat Drop</td></tr><tr><td>Expected Points: ${
+    }% / 445% Meat Drop</td></tr><tr><td>Expected Points: ${
         fungusPoints == 400 ? "<b>" + fungusPoints + "</b>" : fungusPoints
     }</td></tr></table></a>`;
     const megaloStatus = `<a  style="text-decoration: none;" href=adventure.php?snarfblat=566><table style='width: 100%; text-align: center;''><tr><th style="color: blue;">Megalo-City</th></tr><tr><td>${
-        megaloStatusModifier >= 600
+        megaloStatusModifier >= 595
             ? "<b>" + megaloStatusModifier + "</b>"
             : megaloStatusModifier
-    } / 600 Damage Absorption</td></tr><tr><td>Expected Points: ${
+    } / 595 Damage Absorption</td></tr><tr><td>Expected Points: ${
         megaloPoints == 400 ? "<b>" + megaloPoints + "</b>" : megaloPoints
     }</td></tr></table></a>`;
     const fieldStatus = `<a  style="text-decoration: none;" href=adventure.php?snarfblat=564><table style='width: 100%; text-align: center;''><tr><th style="color: green;">Hero's Field</th></tr><tr><td>${
-        fieldStatusModifier >= 400
+        fieldStatusModifier >= 395
             ? "<b>" + fieldStatusModifier + "</b>"
             : fieldStatusModifier
-    }% / 400% Item Drop</td></tr><tr><td>Expected Points: ${
+    }% / 395% Item Drop</td></tr><tr><td>Expected Points: ${
         fieldPoints == 400 ? "<b>" + fieldPoints + "</b>" : fieldPoints
     }</td></tr></table></a>`;
 
@@ -155,7 +155,7 @@ module.exports.main = () => {
     const bonusIndication = `<table style='width: 100%; text-align: center;'><tr><td style='font-family: nes; font-size: small;'>Bonus</td></tr></table>`;
 
     // This is just going to add a row below our active bonus zone listing out how many turns til the swap
-    const bonusRemainingCheat = `<table style='width: 100%; text-align: center;'><tr><th>Bonus shifts in ${bonusTurnsRemaining} turns!</th></tr></table>`;
+    const bonusRemainingCheat = `<table style='width: 100%; text-align: center;'><tr><th>Bonus shifts in ${bonusTurnsRemaining} turn${bonusTurnsRemaining > 1 ? "s" : ""}!</th></tr></table>`;
 
     // We want the zone that currently has the bonus to be listed first
     const cheatTable = () => {
