@@ -5,8 +5,8 @@ module.exports.main = () => {
     // Since the relay script loads when the 8bit realm does, it'll be 8bit's HTML
     var pageText = visitUrl();
 
-    // We don't want to do anything when we visit the treasure house
-    if (pageText.includes(`<b>Treasure House</b>`)) return;
+    // We don't want to do anything when we visit sub-locations in the 8bit realm
+    if (!pageText.includes(`<b>The 8-Bit Realm</b>`)) return;
 
     // This tracks which zone you're getting double points in
     // They're stored as the zone's corresponding color (black, red, blue, green)
