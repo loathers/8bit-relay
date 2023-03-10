@@ -13,7 +13,6 @@ module.exports.main = () => {
     const bonusZone = getProperty("8BitColor");
 
     // This will estimate the number of turns until the bonus zone shifts
-    // Seems to work but turnsSpent can be a little weird
     const bonusTurnsRemaining = 5 - toInt(getProperty("8BitBonusTurns"));
 
     // These are the modifiers that are relevant to 8bit
