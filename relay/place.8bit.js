@@ -13,14 +13,7 @@ module.exports.main = () => {
     const bonusZone = getProperty("8BitColor");
 
     // This will estimate the number of turns until the bonus zone shifts
-    // Seems to work but turnsSpent can be a little weird
-    const bonusTurnsRemaining =
-        5 -
-        ((Location.get("Vanya's Castle").turnsSpent +
-            Location.get("The Fungus Plains").turnsSpent +
-            Location.get("Megalo City").turnsSpent +
-            Location.get("Hero's Field").turnsSpent) %
-            5);
+    const bonusTurnsRemaining = 5 - toInt(getProperty("8BitBonusTurns"));
 
     // These are the modifiers that are relevant to 8bit
     // We're going to use them a couple times so we'll set them to variables here
@@ -155,7 +148,9 @@ module.exports.main = () => {
     const bonusIndication = `<table style='width: 100%; text-align: center;'><tr><td style='font-family: nes; font-size: small;'>Bonus</td></tr></table>`;
 
     // This is just going to add a row below our active bonus zone listing out how many turns til the swap
-    const bonusRemainingCheat = `<table style='width: 100%; text-align: center;'><tr><th>Bonus shifts in ${bonusTurnsRemaining} turn${bonusTurnsRemaining > 1 ? "s" : ""}!</th></tr></table>`;
+    const bonusRemainingCheat = `<table style='width: 100%; text-align: center;'><tr><th>Bonus shifts in ${bonusTurnsRemaining} turn${
+        bonusTurnsRemaining > 1 ? "s" : ""
+    }!</th></tr></table>`;
 
     // We want the zone that currently has the bonus to be listed first
     const cheatTable = () => {
