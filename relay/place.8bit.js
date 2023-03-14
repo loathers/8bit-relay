@@ -109,10 +109,10 @@ module.exports.main = () => {
 
     // This is the value of the modifer that affects each location
     // We needed to format them specifically here, which is why they're different than above
-    const vanyaStatusModifier = max(0, round(initModifier));
-    const fungusStatusModifier = max(0, round(meatModifier));
-    const megaloStatusModifier = max(0, round(daModifier));
-    const fieldStatusModifier = max(0, round(itemModifier));
+    const vanyaStatusModifier = max(0, floor(initModifier));
+    const fungusStatusModifier = max(0, floor(meatModifier));
+    const megaloStatusModifier = max(0, floor(daModifier));
+    const fieldStatusModifier = max(0, floor(itemModifier));
 
     // Little tables for each zone to list your modifiers and expected point gains
     const vanyaStatus = `<a  style="text-decoration: none;" href=adventure.php?snarfblat=565><table style='width: 100%; text-align: center;'><tr><th>Vanya's Castle</th></tr><tr><td>${
