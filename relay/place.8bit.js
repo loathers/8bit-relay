@@ -6,7 +6,7 @@ module.exports.main = () => {
     var pageText = visitUrl();
 
     // We don't want to do anything when we visit sub-locations in the 8bit realm
-    if (!pageText.includes(`<b>The 8-Bit Realm</b>`)) return;
+    if (!pageText.includes(`<b style="color: white">The 8-Bit Realm</b>`)) return;
 
     // This tracks which zone you're getting double points in
     // They're stored as the zone's corresponding color (black, red, blue, green)
